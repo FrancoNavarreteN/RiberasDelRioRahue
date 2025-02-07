@@ -1,0 +1,137 @@
+/* Estilos generales para resetear márgenes y paddings y establecer el modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente principal */
+    color: white; /* Color del texto */
+    background-color: black; /* Fondo negro */
+}
+
+/* ----- Encabezado ----- */
+header {
+    background-color: #3B5323; /* Color de fondo verde oscuro */
+    padding: 15px 20px; /* Espaciado interno */
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos en los extremos */
+    position: fixed; /* Fija el encabezado en la parte superior */
+    width: 100%;
+    z-index: 10; /* Asegura que el encabezado esté por encima de otros elementos */
+    top: 0; /* Se fija en la parte superior */
+}
+
+/* Estilo del logo dentro del encabezado */
+header img {
+    height: 65px; /* Tamaño fijo del logo */
+}
+
+/* ----- Navegación ----- */
+nav {
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos del menú */
+}
+
+/* Enlaces de la navegación */
+nav a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina subrayado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Efecto cuando el usuario pasa el mouse sobre los enlaces */
+nav a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* ----- Sección Hero ----- */
+.hero {
+    background: url('https://via.placeholder.com/1920x600') center/cover no-repeat; /* Imagen de fondo */
+    height: 600px; /* Altura de la sección */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+/* Título principal en la sección Hero */
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejorar visibilidad */
+}
+
+/* Texto secundario en la sección Hero */
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar visibilidad */
+}
+
+/* ----- Sección de características (Features) ----- */
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Título de la sección */
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Texto descriptivo */
+.features p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* ----- Íconos dentro de la sección Features ----- */
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los íconos se acomoden en varias filas */
+    gap: 30px; /* Espaciado entre los íconos */
+}
+
+/* Contenedor de cada icono */
+.icon {
+    text-align: center;
+    max-width: 200px;
+}
+
+/* Tamaño de las imágenes de los íconos */
+.icon img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* Texto dentro de cada icono */
+.icon p {
+    font-size: 1rem;
+}
+
+/* ----- Botón de llamada a la acción ----- */
+button {
+    border: none;
+    background-color: #3B5323; /* Color de fondo verde */
+    color: white; /* Texto en blanco */
+    padding: 15px 30px;
+    border-radius: 6px;
+    cursor: pointer; /* Cambia el cursor a puntero */
+    display: block;
+    margin: 30px auto; /* Centra el botón */
+    font-size: 1.1rem;
+}
+
+/* ----- Pie de página ----- */
+footer {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    padding: 15px;
+    text-align: center;
+}
