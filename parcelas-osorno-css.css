@@ -64,13 +64,13 @@ nav a:hover {
 }
 
 .promo-video {
-    width: 90%%; /* Ancho completo del contenedor */
-    max-width: 75%; /* Ancho máximo */
-    padding-top: 32px;
-    margin: 20px auto; /* Centrado con margen superior e inferior */
-    display: block; /* Asegura que el video se comporte como un bloque */
-    z-index: 1; /* Asegura que el video esté detrás del contenido principal */
-    position: relative;
+width: 90%; /* Ancho completo del contenedor */
+max-width: 75%; /* Ancho máximo */
+padding-top: 32px;
+margin: 20px auto; /* Centrado con margen superior e inferior */
+display: block; /* Asegura que el video se comporte como un bloque */
+z-index: 1; /* Asegura que el video esté detrás del contenido principal */
+position: relative;
 }
 
 .capa {
@@ -150,6 +150,19 @@ nav a:hover {
 .features p {
     font-size: 1.2rem;
     margin-bottom: 40px;
+}
+/* Estilo francés para el párrafo en la sección de precios */
+.french-style {
+    font-family: 'Times New Roman', Times, serif; /* Fuente clásica */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea */
+    color: #ffffff; /* Color del texto */
+    background-color: #000000; /* Fondo claro */
+    padding: 20px; /* Espaciado interno */
+    border-left: 5px solid #ffffff; /* Borde izquierdo */
+    margin: 20px 0; /* Margen superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 /* Contenedor de íconos */
