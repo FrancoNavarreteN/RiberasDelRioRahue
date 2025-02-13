@@ -151,43 +151,62 @@ position: relative;
     font-size: 1.2rem;
     margin-bottom: 40px;
 }
-/* Estilo único para la sección de precios */
-#Precios {
-    background-color: #f0f0f0; /* Fondo claro */
-    padding: 50px 20px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    text-align: left; /* Alineación del texto */
+/* Contenedor general */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #3d4c2d; /* Color verde oscuro del borde */
+    border-radius: 15px;
+    max-width: 1200px; /* Ajusta el ancho */
+    margin: 20px auto; /* Centra la sección */
 }
 
-#Precios h2 {
-    font-size: 2.5rem; /* Tamaño de fuente del título */
-    color: #333; /* Color del título */
-    margin-bottom: 20px; /* Margen inferior */
+/* Estilo único para la sección de precios */
+#Precios .texto {
+    flex: 1;
+    padding-right: 20px;
+    color: white;
+}
+
+#Precios .imagenes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Precios .imagenes img {
+    width: 50%; /* Ajusta el ancho de las imágenes */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#Precios h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
 }
 
 #Precios p {
-    font-size: 1.2rem; /* Tamaño de fuente del párrafo */
-    color: #666; /* Color del texto */
-    line-height: 1.6; /* Altura de línea */
-    margin-bottom: 20px; /* Margen inferior */
+    font-size: 16px;
+    color: white;
+    text-align: justify;
 }
 
-#Precios .french-style {
-    font-family: 'Times New Roman', Times, serif; /* Fuente clásica */
-    font-size: 1.2rem; /* Tamaño de fuente */
-    line-height: 1.6; /* Altura de línea */
-    color: #ffffff; /* Color del texto */
-    background-color: #3B5323; /* Fondo claro */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    border-left: 5px solid #333333; /* Borde izquierdo */
-    margin: 20px 0; /* Margen superior e inferior */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    border-radius: 5px; /* Bordes redondeados */
+#Precios #precio {
+    background-color: #556B2F;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
-
 /* Contenedor de íconos */
 .icon-container {
     display: flex;
