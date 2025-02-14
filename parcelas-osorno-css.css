@@ -172,8 +172,8 @@ position: relative;
     align-items: flex-start;
     padding: 20px;
     background-color: #3d4c2d; /* Color verde oscuro del borde */
-    border-radius: 15px;
-    max-width: 1200px; /* Ajusta el ancho */
+    width: 80%;
+    height: auto;
     margin: 20px auto; /* Centra la sección */
 }
 
@@ -181,7 +181,7 @@ position: relative;
 #Precios .texto {
     flex: 1;
     padding-right: 20px;
-    color: white;
+    color: white !important;
 }
 
 #Precios .imagenes {
@@ -192,7 +192,7 @@ position: relative;
 }
 
 #Precios .imagenes img {
-    width: 50%; /* Ajusta el ancho de las imágenes */
+    width: 100%; /* Ajusta el ancho de las imágenes */
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -201,19 +201,23 @@ position: relative;
 #Precios h1 {
     font-size: 28px;
     font-weight: bold;
-    text-align: left;
-    color: white;
+    text-align: center;   
+    color: rgb(255, 255, 255) !important;
 }
 
 #Precios p {
     font-size: 16px;
-    color: white;
+    color: white !important;
     text-align: justify;
 }
-
+#Precios h3 {
+    font-size: 16px;
+    color: rgb(0, 0, 0) !important;
+    text-align: center;
+}
 #Precios #precio {
     background-color: #556B2F;
-    color: white;
+    color: white !important;
     padding: 5px 10px;
     font-weight: bold;
     display: inline-block;
@@ -276,4 +280,38 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: auto auto; /* Dos filas */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper div {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes llenen el espacio sin deformarse */
+    border-radius: 10px;
+}
+
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.two {
+    grid-column: 1;
+    grid-row: 2;
+}
+.three {
+    grid-column: 2;
+    grid-row: 2;
 }
