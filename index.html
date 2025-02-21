@@ -218,23 +218,6 @@
           </div>
     </section>
 
-    
-    <script>
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                // Scroll hacia abajo - ocultar encabezado
-                header.classList.add('hidden');
-            } else {
-                // Scroll hacia arriba - mostrar encabezado
-                header.classList.remove('hidden');
-            }
-            lastScrollTop = scrollTop;
-        });
-    </script>
 
     <!-- Pie de página con derechos de autor -->
     <footer>
