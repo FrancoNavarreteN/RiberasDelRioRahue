@@ -103,6 +103,27 @@ nav a:hover {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar visibilidad */
 }
 
+/* Estilo para el texto con clase fade-text */
+.fade-text {
+    animation: fadeInOut 6s ease-in-out forwards;
+}
+
+/* Animación para el texto */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* ----- Sección de características (Features) ----- */
 .features {
     padding: 50px 20px;
@@ -336,12 +357,14 @@ footer {
         grid-row: auto;
     }
 }
-
+.grid div {
+    min-height: 200px; /* Asegura que las imágenes tengan una altura mínima */
+}
 /* Estilos para la galería */
 .grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
     width: 100%;
     height: auto; /* Ajusta el alto automáticamente */
     grid-gap: 10px;
