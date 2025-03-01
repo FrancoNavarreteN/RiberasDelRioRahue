@@ -12,17 +12,134 @@ body {
     background-color: #E2E2E2; /* Fondo negro */
 }
 
-/* ----- Encabezado ----- */
+/* ----- ENCABEZADO ----- */
 header {
-    background-color: #3B5323; /* Color de fondo verde oscuro */
-    padding: 10px 30px; /* Espaciado interno */
+    background-color: #3B5323;
+    padding: 10px 30px;
     display: flex;
-    justify-content: space-between; /* Distribuye los elementos en los extremos */
-    position: fixed; /* Fija el encabezado en la parte superior */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
     width: 100%;
-    z-index: 10; /* Asegura que el encabezado esté por encima de otros elementos */
-    top: 0; /* Se fija en la parte superior */
+    z-index: 1002;
+    top: 0;
 }
+
+/* MENÚ NORMAL (Solo en Escritorio) */
+.nav-desktop {
+    display: flex;
+    gap: 20px;
+}
+.nav-desktop a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+}
+.nav-desktop a:hover {
+    text-decoration: underline;
+}
+
+/* MENÚ HAMBURGUESA (Oculto en Escritorio) */
+.hamburger {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 1003;
+    display: none; /* Ocultar en PC */
+}
+.hamburger ._layer {
+    background: #ffffff;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    width: 28px;
+    height: 4px;
+    transition: all 0.25s ease;
+}
+.hamburger:hover .-top {
+    transform: translateY(-100%);
+}
+.hamburger:hover .-bottom {
+    transform: translateY(50%);
+}
+.hamburger.is-active .-top {
+    transform: translateY(200%) rotate(45deg) !important;
+}
+.hamburger.is-active .-mid {
+    opacity: 0;
+}
+.hamburger.is-active .-bottom {
+    transform: translateY(-200%) rotate(135deg) !important;
+}
+
+/* MENÚ DESPLEGABLE (Solo en Móvil) */
+.menuppal {
+    background-color: rgba(255, 255, 255, 0.98);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    transform: translateY(-100%);
+    transition: transform 0.35s ease-in-out;
+    z-index: 1001;
+    text-align: center;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Botón de Cierre (X) */
+.close-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #3B5323;
+    cursor: pointer;
+}
+
+/* Cuando el menú está activo */
+.menuppal.is_active {
+    transform: translateY(0);
+}
+
+.menuppal ul {
+    list-style: none;
+    padding: 0;
+}
+.menuppal ul li {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 15px;
+}
+.menuppal ul li a {
+    text-decoration: none;
+    color: #3B5323;
+}
+.menuppal ul li a:hover {
+    color: #000;
+}
+
+/* MEDIA QUERIES (Hacer cambios solo en móviles) */
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none; /* Ocultar menú normal en móviles */
+    }
+    .hamburger {
+        display: block; /* Mostrar hamburguesa en móviles */
+    }
+}
+
 
 /* Estilo del logo dentro del encabezado */
 header img {
@@ -49,7 +166,7 @@ nav a:hover {
     text-decoration: underline; /* Subrayado al pasar el mouse */
 }
 
-/* ----- Sección Hero ----- */
+ 
 #hero {
     position: relative;
     padding-top: 100px; /* Espacio para el encabezado fijo */
@@ -63,6 +180,13 @@ nav a:hover {
     text-align: center;
     color: rgb(255, 255, 255); /* Asegúrate de que el texto sea visible sobre el video */
     z-index: 2; /* Asegura que el contenido principal esté por encima del video */
+}
+
+@media (max-width: 768px) {
+    .Principal {
+        width: 90%; /* Ancho completo del contenedor */
+        max-width: 75%; /* Ancho máximo */
+    }
 }
 
 /* Estilo para el video de fondo difuminado */
@@ -143,6 +267,34 @@ nav a:hover {
 }
 
 
+.promo-iframe {
+    width: 50%;
+    height: 650px;
+    border: 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .promo-iframe {
+        width: 100%; /* Aumenta el ancho al 90% del contenedor */
+        height: 300px; /* Reduce la altura a 300px */
+    }
+}
+
+
+.map-iframe {
+    width: 50%;
+    height: 650px;
+    border: 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .map-iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
 /* Nueva clase para la sección "Porque Invertir" */
 .why-invest {
     max-width: 800px;       /* Ajusta el ancho máximo si lo deseas */
@@ -173,7 +325,7 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px;
     background-color: #3d4c2d; /* Color verde oscuro del borde */
     width: 80%;
@@ -202,18 +354,17 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+
+
 #Precios h1 {
     font-size: 28px;
     font-weight: bold;
     text-align: center;   
     color: rgb(255, 255, 255) !important;
+    padding: 30px;
 }
 
-#Precios p {
-    font-size: 16px;
-    color: white !important;
-    text-align: justify;
-}
+
 
 #Precios h3 {
     font-size: 16px;
@@ -229,6 +380,8 @@ nav a:hover {
     display: inline-block;
     border-radius: 5px;
     margin-bottom: 20px;
+    font-size: 25px;  /* Aumenta el tamaño aún más */
+    text-transform: uppercase; 
 }
 
 /* Estilo único para la subsección de testimonios dentro de precios */
@@ -288,6 +441,31 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+#Precios h1 {
+    font-size: 42px;  /* Aumenta el tamaño del título */
+    font-weight: bold;
+    text-align: center;   
+    color: rgb(255, 255, 255) !important;
+    margin-bottom: 10px;
+}
+
+#Precios p {
+    font-size: 25px;  /* Hace el texto más grande */
+    color: white !important;
+    text-align: justify;
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+@media (max-width: 768px) {
+    #Precios .container {
+        flex-direction: column;
+    }
+    #Precios p {
+        padding: 0;
+        font-size: 20px;
+        text-align: center;
+    }
+}
 /* Contenedor de íconos */
 .icon-container {
     display: flex;
@@ -357,6 +535,7 @@ footer {
         grid-row: auto;
     }
 }
+
 .grid div {
     min-height: 200px; /* Asegura que las imágenes tengan una altura mínima */
 }
@@ -427,7 +606,7 @@ footer {
 }
 
 .grid-item8 {
-    background-image: url("https://images.unsplash.com/photo-1534743901536-d184ed4194bc?ixlib=rb-0.3.5&s=21fd4555141d93425b8ee3f80f764e69&auto=format&fit=crop&w=634&q=80");
+    background-image: url('Picture_Proyect/testfoto.jpg');
     background-size: cover;
     background-position: center;
     grid-column: 6/8;
