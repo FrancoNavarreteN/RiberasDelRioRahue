@@ -540,6 +540,7 @@ footer {
     min-height: 200px; /* Asegura que las imágenes tengan una altura mínima */
 }
 /* Estilos para la galería */
+/* Estilos para la galería */
 .grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -611,6 +612,10 @@ footer {
     background-position: center;
     grid-column: 6/8;
     grid-row: 1/6;
+}
+
+.grid div {
+    min-height: 200px; /* Asegura que las imágenes tengan una altura mínima */
 }
 
 .wrapper {
